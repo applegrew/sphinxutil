@@ -13,3 +13,8 @@ Intersphinx Objects.inv encoder-decoder
 * Class `Django` is specialized to 'fix' Django's `objects.inv` files. The original ones which can be downloaded from `http://docs.djangoproject.com/en/<version>/_objects/` do not have fully qualified references for some classes. Take for example, `django.forms.Select`. Although this reference is correct, but when using [autodoc](http://sphinx.pocoo.org/ext/autodoc.html) and `show-inheritance` option, it will generate the path `django.forms.widgets.Select`, which is the actual path. Unfortunately Django's provided `objects.inv` has no reference for `django.forms.widgets.Select`, resulting in `intersphinx` unable to link such references.
 
     This class will go over the known patterns in the original `objects.inv` and create a new one with all the missing references. Note that, `main()` of class `EncodeDecodeObjectInv` exposes this class for the user.
+
+Some special files mentioned:-
+
+1. django1.4.1.inv - Is the 'fixed' `objects.inv` file of Django version 1.4.1.
+2. sphinxutil.jar - Is a runnable jar of this util.
